@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DIABETIES PREDICTION</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+   
+   
+    .container {
+      height: 300px;
+      font-size: 20px;
+        align-items: center;
+      text-align: justify;
+      margin: auto;
+      width: 50%;
+      border: 10px solid green;
+      padding: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background: rgba(175, 216, 246, 0.379);
+       
+  box-shadow: 0 8px 32px 0 rgba(14, 20, 94, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 100px;
+  border: 10px solid rgba( 255, 255, 255, 0.18 );
+      
+    }
+     
+    body{
+        background-image: url("{% static 'diabeties prediction/images/hpg.jpg' %}"); 
+      background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  height: 600px;
+  margin: 0 auto;
+  
+    }
+    </style>
+</head>
+<body>
+ 
+<div align="center" class="container">
+ <form action="{% url 'result' %}" method="get">
+    {% csrf_token %} 
+     <center>
+    <table>
+         
+        <tr>
+            <td>No. of Pregnancies</td> 
+            <td><input type="text" placeholder="Enter no of Pregnancies" name="n1"  required></td>
+        </tr>
+        <tr>
+            <td>Glucose</td>  <td><input type="text" placeholder="Enter Glucose level" name="n2" required></td>
+        </tr>
+        <tr>
+            <td>BloodPressure</td> <td><input type="text" placeholder="Enter Blood Pressure level" name="n3"   required></td>
+        </tr>
+        <tr>
+            <td>SkinThickness </td> <td><input type="text" placeholder="Enter SkinThickness level" name="n4"   required></td>
+        </tr>
+        <tr>
+            <td>Insulin</td> <td><input type="text" placeholder="Enter Insulin level" name="n5"   required ></td>
+            
+        </tr>
+        <tr>
+            <td>BMI</td> <td><input type="text" placeholder="Enter BMI level" name="n6"  required></td>
+        </tr>
+        <tr>
+            <td>DiabetesPedigreeFunction</td> <td> <input type="text" placeholder="Enter DiabetesPedigreeFunction level" name="n7"   required></td>
+        </tr>
+        <tr>
+            <td>Age</td> <td><input type="text" placeholder="Enter your Age " name="n8"   required></td>
+        </tr>
+         
+    </table>
+      
+     
+    <button type="submit">Submit</button>
+ 
+  <input type="reset">
+ 
+   </center> 
+    </form>
+    <center> 
+     
+     </center>
+ </div>
+ 
+ 
+
+</body>
+</html>

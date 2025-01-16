@@ -1,0 +1,52 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIABETIES PREDICTION</title>
+    <style>
+        body{ background-image: url("{% static 'diabeties prediction/images/DIABETIES.jpg' %}" );
+          background-size: cover;
+            background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  height: 600px;
+  margin: 0 auto;
+            
+        }
+        .container{
+            height: 200px;
+      font-size: 20px;
+        align-items: center;
+      text-align: -webkit-center;
+      margin: auto;
+      width: 50%;
+      border: 0px;
+      padding: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+       
+            box-shadow: 0 8px 32px 0 rgba(14, 20, 94, 0.37);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 100px;
+  border: 10px solid rgba( 255, 255, 255, 0.18 );
+        }
+        p{
+            color: black;
+            font-weight: 900;
+             
+        }
+    </style>
+</head>
+<body>
+<div align="center" class="container">
+    <h2 style="font-weight: bold">Here is your Result:</h2>
+    <p>{{ result2 }}</p>
+</div>
+ 
+</body>
+</html>
